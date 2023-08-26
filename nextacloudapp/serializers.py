@@ -1,9 +1,9 @@
 from rest_framework import serializers
-from .models import EquipmentAndItems , Brands , Store
+from .models import Items , Brands , Store , Staff
 
-class EquipmentAndItemsSerializer(serializers.ModelSerializer):
+class ItemsSerializer(serializers.ModelSerializer):
     class Meta: 
-        model = EquipmentAndItems
+        model = Items
         fields = '__all__'
 
 class BrandsSerializer(serializers.ModelSerializer):
@@ -14,4 +14,9 @@ class BrandsSerializer(serializers.ModelSerializer):
 class StoreSerializer(serializers.ModelSerializer):
     class Meta:
         model = Store
+        fields = '__all__'
+
+class StaffSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Staff
         fields = '__all__'
